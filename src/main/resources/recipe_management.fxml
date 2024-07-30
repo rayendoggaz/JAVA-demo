@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="577.0" prefWidth="500.0" spacing="20" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RecipeManagementController">
+
+   <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Add Recipe" />
+
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+        <Label style="-fx-font-size: 14px;" text="Recipe Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <TextField fx:id="nameTextField" prefWidth="200" style="-fx-pref-width: 300px;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></TextField>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+        <Label style="-fx-font-size: 14px;" text="Ingredients:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <TextArea fx:id="ingredientsTextArea" prefHeight="100" prefWidth="200" style="-fx-pref-width: 300px;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></TextArea>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+        <Label style="-fx-font-size: 14px;" text="Instructions:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <TextArea fx:id="instructionsTextArea" prefHeight="100" prefWidth="200" style="-fx-pref-width: 300px;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></TextArea>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+        <Label style="-fx-font-size: 14px;" text="Cooking Time (min):" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <TextField fx:id="cookingTimeTextField" prefWidth="100" style="-fx-pref-width: 300px;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></TextField>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <GridPane hgap="10" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+        <Label style="-fx-font-size: 14px;" text="Category/Tag:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <TextField fx:id="categoryTextField" prefWidth="200" style="-fx-pref-width: 300px;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></TextField>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+      
+          <Button onAction="#addRecipe" prefWidth="130.0" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" text="Add Recipe">
+            <HBox.margin>
+               <Insets left="20.0" right="20.0" top="20.0" />
+            </HBox.margin>
+         </Button>
+      
+          <Button onAction="#cancel" prefWidth="130.0" style="-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" text="Cancle">
+            <HBox.margin>
+               <Insets left="20.0" right="20.0" top="20.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+   </HBox>
+
+</VBox>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RecipeDetailsController">
+    <HBox alignment="CENTER">
+        <Label styleClass="header" text="Recipe Details">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+    </HBox>
+    <GridPane hgap="10" vgap="10">
+        <Label styleClass="label-title" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <Label fx:id="nameLabel" styleClass="label-content" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        
+        <Label styleClass="label-title" text="Ingredients:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <Label fx:id="ingredientsLabel" styleClass="label-content" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        
+        <Label styleClass="label-title" text="Instructions:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <Label fx:id="instructionsLabel" styleClass="label-content" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        
+        <Label styleClass="label-title" text="Cooking Time:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <Label fx:id="cookingTimeLabel" styleClass="label-content" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        
+        <Label styleClass="label-title" text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin></Label>
+        <Label fx:id="categoryLabel" styleClass="label-content" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <HBox alignment="CENTER">
+        <Button onAction="#goBack" style="-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 5 10; -fx-background-radius: 5;" styleClass="back-button" text="Go Back">
+        
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin></Button>
+         <Button onAction="#openUpdateRecipe" style="-fx-font-size: 14px; -fx-background-color: #FFC107; -fx-text-fill: white; -fx-padding: 5 10; -fx-background-radius: 5;" text="Update" />
+         <Button onAction="#exportRecipe" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 5 10; -fx-background-radius: 5;" text="Export Recipe">
+         <HBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </HBox.margin></Button>
+      </HBox>
+</VBox>
